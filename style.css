@@ -1,0 +1,115 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+header {
+    background-color: aquamarine;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* alinha os itens verticalmente */
+}
+
+.bar{
+    width: 20px;
+    height: 4px;
+    background-color: black;
+    margin: 4px;
+}
+
+.menu-hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+}
+
+.menu li a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    display: grid; /* grid é uma forma de display para organizar em "grades" */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* serve para organizar em colunas horizontais */
+    grid-gap: 50px;
+    text-align: center;
+}
+
+.container{
+    display: grid; /*dava para usar o display flex, achei mais fácil */
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    gap: 20px;
+}
+
+h2{
+    text-align: center;
+}
+
+.container p {
+    text-align: justify;
+
+}
+
+img{
+    width: 100%;
+}
+
+footer{
+    background-color: chartreuse;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+.container-footer{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+
+
+@media (max-width: 768px) {
+    .menu-hamburger {
+        display: block;
+    }
+    .menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu li {
+        margin: 10px 0;
+    }
+    .menu.active{
+        display: flex;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-footer{
+        display: inline;
+        text-align: center;
+    }
+
+    .coluna{
+        margin-bottom: 30px;
+    }
+}
+
